@@ -3,8 +3,6 @@ from ray import serve
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
-ray.init()
-
 # Define a Ray Serve deployment
 @serve.deployment(num_replicas=1)
 class ModelServer:
